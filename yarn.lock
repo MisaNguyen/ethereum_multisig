@@ -13934,10 +13934,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"qr@npm:~0":
-  version: 0.7.0
-  resolution: "qr@npm:0.7.0"
-  checksum: 10/36559c7f71261c5bf7ae14a62266aee7a158470da2c72b10286ec148da6ac9d6b959e3ebbfd81e495a16e2a8b2bb7e591ee6f118b1f2916a514a96e79e1bbc93
+"qr@npm:0.5.5":
+  version: 0.5.5
+  resolution: "qr@npm:0.5.5"
+  checksum: 10/6eb9566aa40f4d907b3fb0f8f42b4dc9799bfe677198ebd6528855ae1df0e879e06063903d207fe17d6ee7a6d942dcfe285201036f6a2709759b8cd454ab552f
   languageName: node
   linkType: hard
 

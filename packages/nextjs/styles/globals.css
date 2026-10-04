@@ -16,26 +16,26 @@
 @plugin "daisyui/theme" {
   name: "light";
 
-  --color-primary: #93bbfb;
-  --color-primary-content: #212638;
-  --color-secondary: #dae8ff;
-  --color-secondary-content: #212638;
-  --color-accent: #93bbfb;
-  --color-accent-content: #212638;
-  --color-neutral: #212638;
-  --color-neutral-content: #ffffff;
+  --color-primary: #0f766e;
+  --color-primary-content: #ffffff;
+  --color-secondary: #e2e8f0;
+  --color-secondary-content: #0f172a;
+  --color-accent: #1d4ed8;
+  --color-accent-content: #ffffff;
+  --color-neutral: #0f172a;
+  --color-neutral-content: #f8fafc;
   --color-base-100: #ffffff;
-  --color-base-200: #f4f8ff;
-  --color-base-300: #dae8ff;
-  --color-base-content: #212638;
-  --color-info: #93bbfb;
-  --color-success: #34eeb6;
-  --color-warning: #ffcf72;
-  --color-error: #ff8863;
+  --color-base-200: #f1f5f9;
+  --color-base-300: #cbd5e1;
+  --color-base-content: #0f172a;
+  --color-info: #0284c7;
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
 
-  --radius-field: 0rem;
-  --radius-box: 0rem;
-  --radius-selector: 0rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.375rem;
+  --radius-selector: 0.25rem;
 
   --tt-tailw: 6px;
 }
@@ -43,31 +43,30 @@
 @plugin "daisyui/theme" {
   name: "dark";
 
-  --color-primary: #212638;
-  --color-primary-content: #f9fbff;
-  --color-secondary: #323f61;
-  --color-secondary-content: #f9fbff;
-  --color-accent: #4969a6;
-  --color-accent-content: #f9fbff;
-  --color-neutral: #f9fbff;
-  --color-neutral-content: #385183;
-  --color-base-100: #385183;
-  --color-base-200: #2a3655;
-  --color-base-300: #212638;
-  --color-base-content: #f9fbff;
-  --color-info: #385183;
-  --color-success: #34eeb6;
-  --color-warning: #ffcf72;
-  --color-error: #ff8863;
+  --color-primary: #14b8a6;
+  --color-primary-content: #042f2e;
+  --color-secondary: #1e293b;
+  --color-secondary-content: #e2e8f0;
+  --color-accent: #60a5fa;
+  --color-accent-content: #0b1220;
+  --color-neutral: #e2e8f0;
+  --color-neutral-content: #0f172a;
+  --color-base-100: #111827;
+  --color-base-200: #0b1220;
+  --color-base-300: #1f2937;
+  --color-base-content: #e2e8f0;
+  --color-info: #38bdf8;
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
 
-  --radius-field: 0rem;
-  --radius-box: 0rem;
-  --radius-selector: 0rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.375rem;
+  --radius-selector: 0.25rem;
 
   --tt-tailw: 6px;
   --tt-bg: var(--color-primary);
 }
-
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -117,4 +116,52 @@
 
 .link:hover {
   opacity: 80%;
+}
+
+.vault-card {
+  background: var(--color-base-100);
+  border: 1px solid var(--color-base-300);
+  border-radius: var(--radius-box);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 0.03) inset, 0 8px 24px -12px rgb(0 0 0 / 0.5);
+}
+
+.vault-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.vault-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.vault-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 9rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-base-200);
+  border: 1px solid var(--color-base-300);
+  border-radius: var(--radius-box);
+}
+
+.vault-status-needs {
+  border-left-color: var(--color-warning);
+}
+.vault-status-ready {
+  border-left-color: var(--color-success);
+  background: color-mix(in srgb, var(--color-success) 8%, var(--color-base-100));
+}
+.vault-status-wait {
+  border-left-color: var(--color-base-300);
+}
+.vault-status-done {
+  border-left-color: var(--color-info);
+  opacity: 0.9;
 }
